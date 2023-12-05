@@ -1,0 +1,12 @@
+E:\Programming\2023\Cshap\Project\TodoListDatabase\FieldValidatorAPI\bin\Debug\net8.0\FieldValidatorAPI.deps.json
+E:\Programming\2023\Cshap\Project\TodoListDatabase\FieldValidatorAPI\bin\Debug\net8.0\FieldValidatorAPI.dll
+E:\Programming\2023\Cshap\Project\TodoListDatabase\FieldValidatorAPI\bin\Debug\net8.0\FieldValidatorAPI.pdb
+E:\Programming\2023\Cshap\Project\TodoListDatabase\FieldValidatorAPI\obj\Debug\net8.0\FieldValidatorAPI.GeneratedMSBuildEditorConfig.editorconfig
+E:\Programming\2023\Cshap\Project\TodoListDatabase\FieldValidatorAPI\obj\Debug\net8.0\FieldValidatorAPI.AssemblyInfoInputs.cache
+E:\Programming\2023\Cshap\Project\TodoListDatabase\FieldValidatorAPI\obj\Debug\net8.0\FieldValidatorAPI.AssemblyInfo.cs
+E:\Programming\2023\Cshap\Project\TodoListDatabase\FieldValidatorAPI\obj\Debug\net8.0\FieldValidatorAPI.csproj.CoreCompileInputs.cache
+E:\Programming\2023\Cshap\Project\TodoListDatabase\FieldValidatorAPI\obj\Debug\net8.0\FieldValidatorAPI.sourcelink.json
+E:\Programming\2023\Cshap\Project\TodoListDatabase\FieldValidatorAPI\obj\Debug\net8.0\FieldValidatorAPI.dll
+E:\Programming\2023\Cshap\Project\TodoListDatabase\FieldValidatorAPI\obj\Debug\net8.0\refint\FieldValidatorAPI.dll
+E:\Programming\2023\Cshap\Project\TodoListDatabase\FieldValidatorAPI\obj\Debug\net8.0\FieldValidatorAPI.pdb
+E:\Programming\2023\Cshap\Project\TodoListDatabase\FieldValidatorAPI\obj\Debug\net8.0\ref\FieldValidatorAPI.dll

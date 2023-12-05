@@ -119,3 +119,6 @@ E:\Programming\2023\Cshap\Project\TodoListDatabase\TodoListDatabase\obj\Debug\ne
 E:\Programming\2023\Cshap\Project\TodoListDatabase\TodoListDatabase\obj\Debug\net8.0\TodoListDatabase.pdb
 E:\Programming\2023\Cshap\Project\TodoListDatabase\TodoListDatabase\obj\Debug\net8.0\TodoListDatabase.genruntimeconfig.cache
 E:\Programming\2023\Cshap\Project\TodoListDatabase\TodoListDatabase\obj\Debug\net8.0\ref\TodoListDatabase.dll
+E:\Programming\2023\Cshap\Project\TodoListDatabase\TodoListDatabase\bin\Debug\net8.0\FieldValidatorAPI.dll
+E:\Programming\2023\Cshap\Project\TodoListDatabase\TodoListDatabase\bin\Debug\net8.0\FieldValidatorAPI.pdb
+E:\Programming\2023\Cshap\Project\TodoListDatabase\TodoListDatabase\obj\Debug\net8.0\TodoListDatabase.sourcelink.json
