@@ -9,7 +9,10 @@ namespace TodoListDatabase.Controllers
     public interface ITodo
     {
 
-        bool todo(string[] fields);
+        bool addTodo(string[] fields);
+        bool changeTodo(int id);
+        bool isDoneTodo(int id);
+        bool removeTodo(int id);
         bool taskExist(string email);
     }
 }

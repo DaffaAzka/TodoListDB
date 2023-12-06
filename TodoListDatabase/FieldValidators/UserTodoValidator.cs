@@ -47,7 +47,29 @@ namespace TodoListDatabase.FieldValidators
         private bool ValidField(int index, string fieldValue, string[] fieldArray, out string fieldInvalidMsg)
         {
             fieldInvalidMsg = "";
-            return true;
+
+            FieldConstants.TODO todolist = (FieldConstants.TODO)index;
+
+            switch (todolist) {
+
+                case FieldConstants.TODO.VerifyId:
+                    fieldInvalidMsg = (!_requiredValidGate(fieldValue)) ? $"You must enter the value for field-{Enum.GetName(typeof(FieldConstants.USER), registration)}{Environment.NewLine}" : "";
+                    break;
+
+                case FieldConstants.TODO.Task:
+                    fieldInvalidMsg = (!_requiredValidGate(fieldValue)) ? $"You must enter the value for field-{Enum.GetName(typeof(FieldConstants.USER), registration)}{Environment.NewLine}" : "";
+                    break;
+
+                case FieldConstants.TODO.IsDone:
+                    fieldInvalidMsg = (!_requiredValidGate(fieldValue)) ? $"You must enter the value for field-{Enum.GetName(typeof(FieldConstants.USER), registration)}{Environment.NewLine}" : "";
+                    break;
+
+                default:
+                    throw new ArgumentException("This field does not exist!");
+
+            }
+            return fieldInvalidMsg == "";
+
         }
     }
 }
