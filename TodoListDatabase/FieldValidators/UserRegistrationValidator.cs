@@ -60,7 +60,7 @@ namespace TodoListDatabase.FieldValidators
 
             switch(registration)
             {
-                case FieldConstants.USER.VerifyId:
+                case FieldConstants.USER.VeridyId:
                     fieldInvalidMsg = (!_requiredValidGate(fieldValue)) ? $"You must enter the value for field-{Enum.GetName(typeof(FieldConstants.USER), registration)}{Environment.NewLine}" : "";
                     break;
 

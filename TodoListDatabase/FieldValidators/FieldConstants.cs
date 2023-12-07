@@ -10,7 +10,7 @@ namespace TodoListDatabase.FieldValidators
     {
         public enum USER {
             Id,
-            VerifyId,
+            VeridyId,
             Username,
             Email,
             Password

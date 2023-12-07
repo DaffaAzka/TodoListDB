@@ -53,15 +53,15 @@ namespace TodoListDatabase.FieldValidators
             switch (todolist) {
 
                 case FieldConstants.TODO.VerifyId:
-                    fieldInvalidMsg = (!_requiredValidGate(fieldValue)) ? $"You must enter the value for field-{Enum.GetName(typeof(FieldConstants.USER), registration)}{Environment.NewLine}" : "";
+                    fieldInvalidMsg = (!_requiredValidGate(fieldValue)) ? $"You must enter the value for field-{Enum.GetName(typeof(FieldConstants.USER), todolist)}{Environment.NewLine}" : "";
                     break;
 
                 case FieldConstants.TODO.Task:
-                    fieldInvalidMsg = (!_requiredValidGate(fieldValue)) ? $"You must enter the value for field-{Enum.GetName(typeof(FieldConstants.USER), registration)}{Environment.NewLine}" : "";
+                    fieldInvalidMsg = (!_requiredValidGate(fieldValue)) ? $"You must enter the value for field-{Enum.GetName(typeof(FieldConstants.USER), todolist)}{Environment.NewLine}" : "";
                     break;
 
                 case FieldConstants.TODO.IsDone:
-                    fieldInvalidMsg = (!_requiredValidGate(fieldValue)) ? $"You must enter the value for field-{Enum.GetName(typeof(FieldConstants.USER), registration)}{Environment.NewLine}" : "";
+                    fieldInvalidMsg = (!_requiredValidGate(fieldValue)) ? $"You must enter the value for field-{Enum.GetName(typeof(FieldConstants.USER), todolist)}{Environment.NewLine}" : "";
                     break;
 
                 default:

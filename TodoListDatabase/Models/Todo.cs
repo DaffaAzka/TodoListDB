@@ -14,6 +14,5 @@ namespace TodoListDatabase.Models
         public string VerifyId { get; set; }
         public string Task { get; set; }
         public bool IsDone { get; set; }
-
     }
 }

@@ -10,9 +10,8 @@ namespace TodoListDatabase.Controllers
     {
 
         bool addTodo(string[] fields);
-        bool changeTodo(int id);
+        bool changeTodo(int id, string task);
         bool isDoneTodo(int id);
-        bool removeTodo(int id);
-        bool taskExist(string email);
+        bool taskExist(string task);
     }
 }
