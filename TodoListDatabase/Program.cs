@@ -41,7 +41,8 @@ internal class Program
         // todo.getAllTodo();
 
         var reg = new RegisterView(validator, register);
-        reg.RunView();
+        var log = new LoginView(login);
+        log.RunView();
 
     }
 
