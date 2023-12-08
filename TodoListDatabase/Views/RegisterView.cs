@@ -29,18 +29,20 @@ namespace TodoListDatabase.Views
             _fieldValidator.FieldArray[(int)FieldConstants.USER.Username] = GetInputUserRegister(FieldConstants.USER.Username, "Please enter your username: ");
             _fieldValidator.FieldArray[(int)FieldConstants.USER.Email] = GetInputUserRegister(FieldConstants.USER.Email, "Please enter your email address: ");
             _fieldValidator.FieldArray[(int)FieldConstants.USER.Password] = GetInputUserRegister(FieldConstants.USER.Password, "Please enter your password: ");
+            _fieldValidator.FieldArray[(int)FieldConstants.USER.VeridyId] = InputUtil.GenerateHash(_fieldValidator.FieldArray[(int)FieldConstants.USER.Username], "5");
 
             RegisterUser();
         }
 
         private void RegisterUser()
         {
-            _fieldValidator.FieldArray[(int)FieldConstants.USER.VeridyId] = InputUtil.GenerateHash(_fieldValidator.FieldArray[(int)FieldConstants.USER.Username], "5");
             _register.register(_fieldValidator.FieldArray);
 
             CommonOutputFormat.ChangeFontColor(FontTheme.SUCCESS);
             Console.WriteLine("Success to register!");
             CommonOutputFormat.ChangeFontColor(FontTheme.DEFAULT);
+
+            Console.Clear();
 
         }
 

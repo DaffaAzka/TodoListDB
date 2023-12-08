@@ -53,7 +53,7 @@ namespace TodoListDatabase.Controllers
                            where b.VerifyId == Temp.user.VeridyId
                            select b;
 
-                Temp.tasks = list.ToList();
+                Temp.tasks = list.ToArray();
             }
 
             return true;

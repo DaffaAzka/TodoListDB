@@ -10,6 +10,6 @@ namespace TodoListDatabase
     public static class Temp
     {
         public static User user;
-        public static List<Todo> tasks;
+        public static Todo[] tasks = null;
     }
 }

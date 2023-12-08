@@ -41,12 +41,6 @@ namespace TodoListDatabase.Views
                 // UserHompageView userHompage = new UserHompageView(user);
                 // userHompage.RunView();
             }
-            else
-            {
-                CommonOutputFormat.ChangeFontColor(FontTheme.DANGER);
-                Console.WriteLine("The credentials that your entered do not match on our records!");
-                CommonOutputFormat.ChangeFontColor(FontTheme.DEFAULT);
-            }
         }
     }
 }

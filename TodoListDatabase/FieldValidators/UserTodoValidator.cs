@@ -18,7 +18,11 @@ namespace TodoListDatabase.FieldValidators
 
         string[] _fieldArray = null;
 
-        ITodo todo = null;
+        TaskExistGate _taskExistGate = null;
+
+        ITodo _todo = null;
+
+
 
         public string[] FieldArray
         {
@@ -36,12 +40,16 @@ namespace TodoListDatabase.FieldValidators
 
         public UserTodoValidator(ITodo todo)
         {
-            this.todo = todo;
+            _todo = todo;
         }
 
         public void InitialiseValidatorDelegates()
         {
-            throw new NotImplementedException();
+
+            _fieldValidatorGate = new FieldValidatorGate(ValidField);
+            _taskExistGate = new TaskExistGate(_todo.taskExist);
+
+            _requiredValidGate = CommonFieldValidatorFunctions.RequiredValidGate;
         }
 
         private bool ValidField(int index, string fieldValue, string[] fieldArray, out string fieldInvalidMsg)
@@ -58,6 +66,7 @@ namespace TodoListDatabase.FieldValidators
 
                 case FieldConstants.TODO.Task:
                     fieldInvalidMsg = (!_requiredValidGate(fieldValue)) ? $"You must enter the value for field-{Enum.GetName(typeof(FieldConstants.USER), todolist)}{Environment.NewLine}" : "";
+                    fieldInvalidMsg = (fieldInvalidMsg == "") && _taskExistGate(fieldValue) ? $"task already exists{Environment.NewLine}" : fieldInvalidMsg;
                     break;
 
                 case FieldConstants.TODO.IsDone:

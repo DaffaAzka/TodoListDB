@@ -8,10 +8,10 @@ namespace TodoListDatabase.Controllers
 {
     public interface ITodo
     {
-        bool getAllTodo();
-        bool addTodo(string[] fields);
-        bool changeTodo(int id, string task);
-        bool isDoneTodo(int id);
-        bool taskExist(string task);
+        public bool getAllTodo();
+        public bool addTodo(string[] fields);
+        public bool changeTodo(int id, string task);
+        public bool isDoneTodo(int id);
+        public bool taskExist(string task);
     }
 }
