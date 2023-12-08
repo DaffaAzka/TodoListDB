@@ -48,7 +48,7 @@ namespace FieldValidatorAPI
                 {
                     _compareFieldsValidGate = new CompareFieldsValidGate(CompareFieldsValid);
                 }
-                return CompareFieldsValidGate;
+                return _compareFieldsValidGate;
             }
         }
 

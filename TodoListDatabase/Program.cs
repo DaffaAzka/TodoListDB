@@ -1,7 +1,9 @@
 ﻿using System.Security.Cryptography;
 using TodoListDatabase;
 using TodoListDatabase.Controllers;
+using TodoListDatabase.FieldValidators;
 using TodoListDatabase.Models;
+using TodoListDatabase.Views;
 using static System.Runtime.InteropServices.JavaScript.JSType;
 
 internal class Program
@@ -13,6 +15,8 @@ internal class Program
         IRegister register = new RegisterUser();
         ITodo todo = new TodoUser();
         ILogin login = new LoginUser();
+        IFieldValidator validator = new UserRegistrationValidator(register);
+        validator.InitialiseValidatorDelegates();
 
         // register.register(["2", GenerateHash(name, "5"), name, "az@gmail.com", "Password"]);
 
@@ -36,10 +40,8 @@ internal class Program
 
         // todo.getAllTodo();
 
-        foreach (var item in Temp.tasks)
-        {
-            Console.WriteLine(item.Task);
-        }
+        var reg = new RegisterView(validator, register);
+        reg.RunView();
 
     }
 

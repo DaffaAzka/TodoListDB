@@ -49,7 +49,13 @@ namespace TodoListDatabase.FieldValidators
 
         public void InitialiseValidatorDelegates()
         {
-            throw new NotImplementedException();
+            _fieldValidatorGate = new FieldValidatorGate(ValidField);
+            _emailExistGate = new EmailExistGate(_register.emailExist);
+            _usernameExistGate = new UsernameExistGate(_register.emailExist);
+
+            _requiredValidGate = CommonFieldValidatorFunctions.RequiredValidGate;
+            _patternMatchValidGate = CommonFieldValidatorFunctions.PatternMatchValidGate;
+            _compareFieldsValidGate = CommonFieldValidatorFunctions.CompareFieldsValidGate;
         }
 
         private bool ValidField(int index, string fieldValue, string[] fieldArray, out string fieldInvalidMsg)
@@ -66,13 +72,13 @@ namespace TodoListDatabase.FieldValidators
 
                 case FieldConstants.USER.Username:
                     fieldInvalidMsg = (!_requiredValidGate(fieldValue)) ? $"You must enter the value for field-{Enum.GetName(typeof(FieldConstants.USER), registration)}{Environment.NewLine}" : "";
-                    fieldInvalidMsg = (fieldInvalidMsg == "") && !_patternMatchValidGate(fieldValue, CommonRegularExpressionValidationPatterns.Username_RegEx_Pattern) ? $"You must enter a valid username{Environment.NewLine}" : fieldInvalidMsg;
+                    // fieldInvalidMsg = (fieldInvalidMsg == "") && !_patternMatchValidGate(fieldValue, CommonRegularExpressionValidationPatterns.Username_RegEx_Pattern) ? $"You must enter a valid username{Environment.NewLine}" : fieldInvalidMsg;
                     fieldInvalidMsg = (fieldInvalidMsg == "") && _usernameExistGate(fieldValue) ? $"Username already exists{Environment.NewLine}" : fieldInvalidMsg;
                     break;
 
                 case FieldConstants.USER.Email:
                     fieldInvalidMsg = (!_requiredValidGate(fieldValue)) ? $"You must enter the value for field-{Enum.GetName(typeof(FieldConstants.USER), registration)}{Environment.NewLine}" : "";
-                    fieldInvalidMsg = (fieldInvalidMsg == "") && !_patternMatchValidGate(fieldValue, CommonRegularExpressionValidationPatterns.Email_RegEx_Pattern) ? $"You must enter a valid username{Environment.NewLine}" : fieldInvalidMsg;
+                    fieldInvalidMsg = (fieldInvalidMsg == "") && !_patternMatchValidGate(fieldValue, CommonRegularExpressionValidationPatterns.Email_RegEx_Pattern) ? $"You must enter a valid email{Environment.NewLine}" : fieldInvalidMsg;
                     fieldInvalidMsg = (fieldInvalidMsg == "") && _emailExistGate (fieldValue) ? $"email already exists{Environment.NewLine}" : fieldInvalidMsg;
                     break;
 
