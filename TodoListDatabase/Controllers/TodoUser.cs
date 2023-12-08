@@ -1,5 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
+using System.Collections.Immutable;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
@@ -39,6 +40,20 @@ namespace TodoListDatabase.Controllers
                     result.Task = task;
                     dbContext.SaveChanges();
                 }
+            }
+
+            return true;
+        }
+
+        public bool getAllTodo()
+        {
+            using(var dbContext = new TodoDBContext())
+            {
+                var list = from b in dbContext.Todos
+                           where b.VerifyId == Temp.user.VeridyId
+                           select b;
+
+                Temp.tasks = list.ToList();
             }
 
             return true;
